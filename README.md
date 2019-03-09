@@ -17,11 +17,8 @@ And it will build the pdf file.
 
 # Bugs
 
-A few. 
+None for now
 
-1. URL params not working inside \href
-
-2. Not able to remove dashes from phone.
 
 # Todo
 
