@@ -106,7 +106,7 @@
 	\vcenteredhbox{#4}
 }
 
-\def\@urlparams{\StrSubstitute{\@neighborhood+\@city+\@state+\@country}{ }{+}}
+\def\@urlparams{\StrSubstitute{\@neighborhood+\@city+\@state+\@country}{ }{+}[\first]\xdef\URLparams{\first}\first}
 \def\@phoneparams{\StrSubstitute{\@phone}{ }{}} 		% how to remove the dashes from phone number?
 
 \newcommand{\makecontact}{%
@@ -127,7 +127,7 @@
 
 		\vspace{0.5mm}
 		\makebox[0pt][c]{%
-			\icontext{map-marker}{2ex}{white}{\href{https://www.google.com/maps?q=failure}{\@city, \@state \,-- \@country}} % Why this line fails?
+			\icontext{map-marker}{2ex}{white}{\href{https://www.google.com/maps?q=\URLparams}{\@city, \@state \,-- \@country}} % Why this line fails?
 			\enspace
 			\icontext{phone}{2ex}{white}{\href{tel://\@phone}{\@phone}}
 		}

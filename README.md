@@ -27,4 +27,13 @@ A few.
 
 A lot.
 
+1. Add conditional formatting when some variables were not set (for example do not
+display the phone entry if no phone is set.)
+
+2. Adding some kind of flexibility for the contact. Displaying less or more information.
+
+3. Be able to build CVs without the descriton (for resumes), how to do it?
+
+
+
 
