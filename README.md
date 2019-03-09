@@ -4,11 +4,11 @@ A simple and elegant Curriculum Vitae. Works nice with LaTeX and XeTeX. (haven't
 
 # Example
 
-![CV0](example-cv-1.png)
+![CV0](example-cv-0.png)
 
-![CV1](example-cv-2.png)
+![CV1](example-cv-1.png)
 
-![CV2](example-cv-3.png)
+![CV2](example-cv-2.png)
 
 
 # To use
