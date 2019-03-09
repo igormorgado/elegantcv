@@ -5,4 +5,4 @@ clean:
 	rm -rf example-cv.aux  example-cv.log  example-cv.out  *.png
 
 thumbs:
-	convert -background white -density 150 example-cv.pdf example-cv.png	
+	convert -background white -density 100 example-cv.pdf example-cv.png	
