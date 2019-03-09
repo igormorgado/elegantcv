@@ -2,6 +2,15 @@
 
 A simple and elegant Curriculum Vitae. Works nice with LaTeX and XeTeX. (haven't tried with LuaTex).
 
+# Example
+
+![CV0](example-cv-1.png)
+
+![CV1](example-cv-2.png)
+
+![CV2](example-cv-3.png)
+
+
 # To use
 
 Put the `elegantcv.cls` and `icons` dir at same dir as your curriculum. Use `example-cv.tex` as an
