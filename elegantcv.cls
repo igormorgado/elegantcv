@@ -6,10 +6,9 @@
 \RequirePackage{xstring}
 \RequirePackage[table]{xcolor}
 \RequirePackage{hyperxmp}
-\RequirePackage[unicode]{hyperref}
+\RequirePackage{bookmark}
 
 \pagestyle{plain}
-\graphicspath{{icons/}}
 
 \setlrmarginsandblock{3cm}{3cm}{*}
 \setulmarginsandblock{3cm}{*}{1}
@@ -98,7 +97,7 @@
 
 \newcommand{\icon}[3]{%
 	\colorbox{#3}{%
-		\includegraphics[height=#2]{#1}%
+		\includegraphics[height=#2]{#1.png}%
 	}%
 }
 

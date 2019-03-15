@@ -26,7 +26,7 @@ And it will build the pdf file.
 
 # Bugs
 
-None for now
+Memoir isn't compatible with `htlatex`, need to move to article for better.
 
 
 # Todo
