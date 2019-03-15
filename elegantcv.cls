@@ -53,21 +53,23 @@
 }
 
 
-% HOW TO USE THIS HERE WITH VARIABLES?
-%\hypersetup{
-%	pdftitle={\@fullname:\ Curriculum\ Vitae\ --\ \@tagline},
-%	pdfsubject={Curriculum Vitae},
-%	pdfauthor={\@fullname},
-%	pdfpagemode={UseNone},
-%	pdfkeywords={\@keywords},
-%	pdfcontactcity={\@city},
-%	pdfcontactcountry={\@country},
-%	pdfcontactphone={\@phone},
-%	pdfcontactemail={\@email},
-%	pdfcontacturl={\@website},
-%	pdflang={en},
-%	pdfmetalang={en}
-%}
+\AtBeginDocument{%
+	\title{\@fullname:\ Curriculum\ Vitae}
+	\hypersetup{
+		pdftitle={\@fullname:\ CV\ --\ \@tagline},
+		pdfsubject={Curriculum Vitae},
+		pdfauthor={\@fullname},
+		pdfpagemode={UseNone},
+		pdfkeywords={\@keywords},
+		pdfcontactcity={\@city},
+		pdfcontactcountry={\@country},
+		pdfcontactphone={\@phone},
+		pdfcontactemail={\@email},
+		pdfcontacturl={\@website},
+		pdflang={en},
+		pdfmetalang={en}
+	}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % UTILS
