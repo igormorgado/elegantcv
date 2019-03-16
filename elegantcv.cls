@@ -150,7 +150,7 @@
 \newcommand{\experience}[5]{%
 	\datedsubsection{#1, #2}{#4}
 	\vspace{-1.5ex}
-	\itshape{\small #3}\par\normalfont
+	\textit{\small #3}\par
 	\vspace{1ex}
 	{#5}
 }
@@ -168,7 +168,7 @@
 \newcommand{\compedu}[6]{%
 	\datedsubsection{#1 (#4 hours)}{#5}
 	\vspace{-1.5ex}
-	\itshape{\small #2, #3}. {\small\textsc{Keywords}: \normalfont #6}
+	\textit{\small #2, #3}. {\small\textsc{Keywords}: \normalfont #6}
 }
 
 
@@ -182,15 +182,28 @@
 % {location}
 % {publisher}
 % {addinfo}
+% \newcommand{\publication}[6]{%
+% 	\begingroup
+% 	\noindent
+% 	\normalfont
+% 	{\large \textsc{#1}. \textit{#2} \hfill #3}\par
+% 	\noindent\normalfont{\small #4: #5. #6}\par
+% 	\endgroup\par
+% 	\vspace{\baselineskip}
+% }
 \newcommand{\publication}[6]{%
-	\begingroup
-	\noindent
-	\normalfont
-	{\large \scshape{#1}. \textit{#2} \hfill #3}\par
-	\noindent\normalfont{\small #4: #5. #6}\par
-	\endgroup\par
-	\vspace{\baselineskip}
+	% Author
+	\begingroup\noindent\large\textsc{#1. }\endgroup
+	% Title
+	\begingroup\large\textit{#2}\endgroup
+	\hfill
+    % Year
+	\begingroup\large{#3}\endgroup\par
+    % Location: Publisher. Keywords
+	\begingroup\noindent\small#4: #5. #6\par\endgroup\par
+ 	\vspace{\baselineskip}
 }
+
 
 %
 % Presentation command
@@ -260,21 +273,20 @@
 % REFORMAT SECTIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\ruledsec}[1]{\LARGE\scshape#1{\noindent\doublerule}}
-\setsecheadstyle{\LARGE\scshape}
+\setsecheadstyle{\LARGE\noindent\textsc}
 
-\setsubsecheadstyle{\large\mdseries}
+\setsubsecheadstyle{\large\noindent\textmd}
 
 %\setaftersubsecskip{1pt}
 %\setaftersubsecskip{-1.25ex plus -.5ex minus -.2ex}
 %\setbeforesubsecskip{-1.25ex plus -.5ex minus -.2ex}
 
-\setsubsubsecheadstyle{\normalsize\bfseries}
+\setsubsubsecheadstyle{\normalsize\noindent\textbf}
 %\setbeforesubsubsecskip{1pt}
 %\setaftersubsubsecskip{1pt}
 
 \newcommand{\datedsubsection}[2]{%
-	\subsection[#1]{#1 \hfill {\normalfont #2}}
+	\subsection[#1]{#1 \hfill {\textnormal{#2}}}
 }
 
 
