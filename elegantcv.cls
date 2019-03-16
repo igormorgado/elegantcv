@@ -8,6 +8,7 @@
 \RequirePackage{hyperxmp}
 \RequirePackage{bookmark}
 
+\graphicspath{{.}{icons/}}
 \pagestyle{plain}
 
 \setlrmarginsandblock{3cm}{3cm}{*}
@@ -118,23 +119,23 @@
 	\begin{center}
 		{\Huge{\@fullname}}
 		
-		\vspace{1.0mm}		
+		\vspace{2.0mm}		
 		{\Large{\textit{\@tagline}}}
 
-		\vspace{1.0mm}		
+		\vspace{2.0mm}		
 		\makebox[0pt][c]{%
-			\icontext{email}{2ex}{white}{\href{mailto:\@email?subject=Contact\%20regarding\%20your\%20CV}{\@email}}
+			\icontext{email}{2.5ex}{white}{\href{mailto:\@email?subject=Contact\%20regarding\%20your\%20CV}{\@email}}
 			\enspace
-			\icontext{github}{2ex}{white}{\href{https://github.com/\@github}{\@github}}
+			\icontext{github}{2.5ex}{white}{\href{https://github.com/\@github}{\@github}}
 			\enspace
-			\icontext{www}{2ex}{white}{\href{http://\@website}{\@website}}
+			\icontext{www}{2.5ex}{white}{\href{http://\@website}{\@website}}
 		}
 
-		\vspace{0.5mm}
+		%\vspace{0.5mm}
 		\makebox[0pt][c]{%
-			\icontext{map-marker}{2ex}{white}{\lochref} % Why this line fails?
+			\icontext{map-marker}{2.5ex}{white}{\lochref}
 			\enspace
-			\icontext{phone}{2ex}{white}{\href{tel://\@phone}{\@phone}}
+			\icontext{phone}{2.5ex}{white}{\href{tel://\@phone}{\@phone}}
 		}
 		\vspace{5mm}
 	\end{center}
@@ -154,6 +155,9 @@
 	{#5}
 }
 
+%
+% Complimentary Education command
+%
 % Parameters are:
 % {Course name}
 % {Institution}
@@ -164,10 +168,13 @@
 \newcommand{\compedu}[6]{%
 	\datedsubsection{#1 (#4 hours)}{#5}
 	\vspace{-1.5ex}
-	\itshape{\small #2, #3}. {\small\scshape Keywords: \normalfont #6}
+	\itshape{\small #2, #3}. {\small\textsc{Keywords}: \normalfont #6}
 }
 
 
+%
+% Publication command
+%
 % Parameters
 % {authors}
 % {title}
@@ -180,11 +187,14 @@
 	\noindent
 	\normalfont
 	{\large \scshape{#1}. \textit{#2} \hfill #3}\par
-	\noindent\normalfont{\small #4: #5. #6}
-	\endgroup
+	\noindent\normalfont{\small #4: #5. #6}\par
+	\endgroup\par
 	\vspace{\baselineskip}
 }
 
+%
+% Presentation command
+%
 % Parameters
 % {authors}
 % {title}
@@ -196,12 +206,15 @@
 	\begingroup
 	\noindent
 	\normalfont
-	{\large \scshape{#1}. \textit{#2} \hfill #3}\par
-	\noindent\normalfont{\small #4: #5}. {\small\scshape Keywords: \normalfont #6}
-	\endgroup
+	{\large \textsc{#1}. \textit{#2} \hfill #3}\par
+	\noindent\normalfont{\small #4: #5}. {\small\textsc{Keywords:} \normalfont #6}\par
+	\endgroup\par
 	\vspace{\baselineskip}
 }
 
+%
+% Thesis command
+%
 % Parameters
 % {event name}
 % {year}
@@ -212,11 +225,17 @@
 	\noindent
 	\normalfont
 	{\large #1 \hfill #2}\par
-	\noindent\normalfont{\small #3, #4}.
-	\endgroup
+	\noindent\normalfont{\small #3, #4}.\par
+	\endgroup\par
 	\vspace{\baselineskip}	
 }
 
+%
+% Thesis command
+%
+% Parameters
+% {thesis name}
+% {thesis advisor}
 \newcommand{\thesis}[2]{%
 	\begin{description}[%
 	topsep=0pt,

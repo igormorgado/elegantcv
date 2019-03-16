@@ -1,6 +1,6 @@
 # elegantcv
 
-A simple and elegant Curriculum Vitae. Works nice with LaTeX and XeTeX. (haven't tried with LuaTex).
+A simple and elegant Curriculum Vitae. Works nice with LaTeX, XeTeX and LuaLaTex.
 
 # Example
 
@@ -26,8 +26,6 @@ And it will build the pdf file.
 
 # Bugs
 
-Memoir isn't compatible with `htlatex`, need to move to article for better.
-
 
 # Todo
 
@@ -40,6 +38,4 @@ display the phone entry if no phone is set.)
 
 3. Be able to build CVs without the descriton (for resumes), how to do it?
 
-
-
-
+4. Add a css configuration for `tex4ht`
